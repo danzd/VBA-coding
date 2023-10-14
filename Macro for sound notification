@@ -1,0 +1,45 @@
+This macro can be used when some data are regularly refreshed in a specific sheet and table by Power Query, for example, and there is a need to action asap when a specific value occurs in the table.
+The macro is checking in a Sheet1, a Table1 and column Y. When 'XXX' appears in the column Y the macro will ring. The macro is checking the column every 15s but it can be modified. In order to stop the macro, there is a sub called StopSoundRefresh(). 
+
+
+
+
+Dim continueRefresh As Boolean
+
+Sub CheckTableForNewCase()
+    Dim ws As Worksheet
+    Dim tbl As ListObject
+    Dim rng As Range
+    Dim cell As Range
+   
+  
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    Set tbl = ws.ListObjects("Table1")
+    Set rng = tbl.ListColumns("Status").DataBodyRange
+   
+    ' When "XXX" is in column Y, it will ring
+    For Each cell In rng
+        If cell.Value = "XXX" Then
+            Beep ' Sound
+            Exit For
+        End If
+    Next cell
+   
+    If continueRefresh Then
+    ' For Checking every 15s
+    Application.OnTime Now + TimeValue("00:00:15"), "CheckTableForNewCase"
+    End If
+End Sub
+
+
+Sub StopSoundRefresh()
+
+    continueRefresh = False
+
+    
+End Sub
+
+Sub StartSoundRefresh()
+    continueRefresh = True
+    CheckTableForNewCase
+End Sub
