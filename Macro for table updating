@@ -1,0 +1,512 @@
+This is a macro which is updating a complex table with calculations based on data from different sources. The macro was partially recorded, then put it together and optimized using VBA code.
+
+
+
+
+
+
+Sub Update_cases__in_Transportation_Mode_table()
+Application.ScreenUpdating = False
+'
+' Update_cases_COUNTIFS Macro
+'
+' WK-1
+
+' security
+
+    Range("J8").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J8").Value = Range("J8").Value
+    
+    
+    Range("J9").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J9").Value = Range("J9").Value
+    
+    
+    Range("J15").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J15").Value = Range("J15").Value
+   
+    Range("J16").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J16").Value = Range("J16").Value
+   
+    
+    Range("J18").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J18").Value = Range("J18").Value
+    
+    Range("J19").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J19").Value = Range("J19").Value
+    
+' compliance
+
+    Range("J27").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J27").Value = Range("J27").Value
+    
+    Range("J28").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J28").Value = Range("J28").Value
+    
+    Range("J29").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J29").Value = Range("J29").Value
+   
+   
+   
+    Range("J36").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J36").Value = Range("J36").Value
+    
+    Range("J37").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J37").Value = Range("J37").Value
+    
+    Range("J38").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J38").Value = Range("J38").Value
+   
+   
+    Range("J40").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J40").Value = Range("J40").Value
+    
+    Range("J41").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J41").Value = Range("J41").Value
+    
+    Range("J42").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J42").Value = Range("J42").Value
+   
+   
+' WK-2
+
+
+' security
+
+    Range("M8").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M8").Value = Range("M8").Value
+    
+    
+    Range("M9").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M9").Value = Range("M9").Value
+    
+    
+    Range("M15").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M15").Value = Range("M15").Value
+   
+    Range("M16").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M16").Value = Range("M16").Value
+   
+    
+    Range("M18").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M18").Value = Range("M18").Value
+    
+    Range("M19").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M19").Value = Range("M19").Value
+    
+' compliance
+
+    Range("M27").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M27").Value = Range("M27").Value
+    
+    Range("M28").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M28").Value = Range("M28").Value
+    
+    Range("M29").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M29").Value = Range("M29").Value
+   
+   
+   
+    Range("M36").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M36").Value = Range("M36").Value
+    
+    Range("M37").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M37").Value = Range("M37").Value
+    
+    Range("M38").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M38").Value = Range("M38").Value
+   
+   
+    Range("M40").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M40").Value = Range("M40").Value
+    
+    Range("M41").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M41").Value = Range("M41").Value
+    
+    Range("M42").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M42").Value = Range("M42").Value
+
+
+' YTD
+
+
+' security
+
+    Range("Q8").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q8").Value = Range("Q8").Value
+    
+    
+    Range("Q9").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q9").Value = Range("Q9").Value
+    
+    
+    Range("Q15").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q15").Value = Range("Q15").Value
+   
+    Range("Q16").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q16").Value = Range("Q16").Value
+   
+    
+    Range("Q18").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q18").Value = Range("Q18").Value
+    
+    Range("Q19").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q19").Value = Range("Q19").Value
+    
+' compliance
+
+    Range("Q27").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q27").Value = Range("Q27").Value
+    
+    Range("Q28").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q28").Value = Range("Q28").Value
+    
+    Range("Q29").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q29").Value = Range("Q29").Value
+   
+   
+   
+    Range("Q36").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q36").Value = Range("Q36").Value
+    
+    Range("Q37").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q37").Value = Range("Q37").Value
+    
+    Range("Q38").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q38").Value = Range("Q38").Value
+   
+   
+    Range("Q40").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q40").Value = Range("Q40").Value
+    
+    Range("Q41").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q41").Value = Range("Q41").Value
+    
+    Range("Q42").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q42").Value = Range("Q42").Value
+
+
+
+
+Application.CutCopyMode = False
+Application.ScreenUpdating = True
+   
+End Sub
+
+Sub Update_whole_Transportation_Mode_table()
+Application.ScreenUpdating = False
+Application.DisplayAlerts = False
+'
+' Update_cases_COUNTIFS Macro
+'
+' WK-1
+
+' security
+
+    Range("J8").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J8").Value = Range("J8").Value
+    
+    
+    Range("J9").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J9").Value = Range("J9").Value
+    
+    
+    Range("J15").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J15").Value = Range("J15").Value
+   
+    Range("J16").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J16").Value = Range("J16").Value
+   
+    
+    Range("J18").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J18").Value = Range("J18").Value
+    
+    Range("J19").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J19").Value = Range("J19").Value
+    
+' compliance
+
+    Range("J27").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J27").Value = Range("J27").Value
+    
+    Range("J28").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J28").Value = Range("J28").Value
+    
+    Range("J29").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MLinehaul"")"
+    Range("J29").Value = Range("J29").Value
+   
+   
+   
+    Range("J36").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J36").Value = Range("J36").Value
+    
+    Range("J37").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J37").Value = Range("J37").Value
+    
+    Range("J38").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MSea"")"
+    Range("J38").Value = Range("J38").Value
+   
+   
+    Range("J40").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J40").Value = Range("J40").Value
+    
+    Range("J41").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J41").Value = Range("J41").Value
+    
+    Range("J42").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!X8, Worksheet!B:B, 'Security & Compliance'!X7, Worksheet!R:R, ""MIntermodal"")"
+    Range("J42").Value = Range("J42").Value
+   
+   
+' WK-2
+
+
+' security
+
+    Range("M8").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M8").Value = Range("M8").Value
+    
+    
+    Range("M9").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M9").Value = Range("M9").Value
+    
+    
+    Range("M15").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M15").Value = Range("M15").Value
+   
+    Range("M16").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M16").Value = Range("M16").Value
+   
+    
+    Range("M18").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M18").Value = Range("M18").Value
+    
+    Range("M19").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M19").Value = Range("M19").Value
+    
+' compliance
+
+    Range("M27").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M27").Value = Range("M27").Value
+    
+    Range("M28").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M28").Value = Range("M28").Value
+    
+    Range("M29").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MLinehaul"")"
+    Range("M29").Value = Range("M29").Value
+   
+   
+   
+    Range("M36").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M36").Value = Range("M36").Value
+    
+    Range("M37").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M37").Value = Range("M37").Value
+    
+    Range("M38").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MSea"")"
+    Range("M38").Value = Range("M38").Value
+   
+   
+    Range("M40").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M40").Value = Range("M40").Value
+    
+    Range("M41").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M41").Value = Range("M41").Value
+    
+    Range("M42").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!B:B, 'Security & Compliance'!Y7, Worksheet!R:R, ""MIntermodal"")"
+    Range("M42").Value = Range("M42").Value
+
+
+' YTD
+
+
+' security
+
+    Range("Q8").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q8").Value = Range("Q8").Value
+    
+    
+    Range("Q9").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q9").Value = Range("Q9").Value
+    
+    
+    Range("Q15").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q15").Value = Range("Q15").Value
+   
+    Range("Q16").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q16").Value = Range("Q16").Value
+   
+    
+    Range("Q18").Formula = "=COUNTIFS(Worksheet!J:J, ""XX"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q18").Value = Range("Q18").Value
+    
+    Range("Q19").Formula = "=COUNTIFS(Worksheet!J:J, ""YY"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q19").Value = Range("Q19").Value
+    
+' compliance
+
+    Range("Q27").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q27").Value = Range("Q27").Value
+    
+    Range("Q28").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q28").Value = Range("Q28").Value
+    
+    Range("Q29").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MLinehaul"")"
+    Range("Q29").Value = Range("Q29").Value
+   
+   
+   
+    Range("Q36").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q36").Value = Range("Q36").Value
+    
+    Range("Q37").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q37").Value = Range("Q37").Value
+    
+    Range("Q38").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MSea"")"
+    Range("Q38").Value = Range("Q38").Value
+   
+   
+    Range("Q40").Formula = "=COUNTIFS(Worksheet!J:J, ""ZZ"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q40").Value = Range("Q40").Value
+    
+    Range("Q41").Formula = "=COUNTIFS(Worksheet!J:J, ""MM"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q41").Value = Range("Q41").Value
+    
+    Range("Q42").Formula = "=COUNTIFS(Worksheet!J:J, ""EE"", Worksheet!E:E, 'Security & Compliance'!Y8, Worksheet!R:R, ""MIntermodal"")"
+    Range("Q42").Value = Range("Q42").Value
+
+
+    Application.CutCopyMode = False
+
+' GET loads
+
+Application.ScreenUpdating = False
+Application.DisplayAlerts = False
+
+
+' ROAD
+
+ChDir _
+        "\\XXX\Loads"
+    Workbooks.Open Filename:= _
+        "\\XXX\Loads\Loads_ROAD.csv"
+    Columns("A:A").Select
+    Selection.TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
+        TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
+        Semicolon:=False, Comma:=False, Space:=False, Other:=False, FieldInfo _
+        :=Array(Array(1, 1), Array(2, 1), Array(3, 1)), TrailingMinusNumbers:=True
+    Windows("DRS 2023.xlsm").Activate
+    
+    Range("K7").FormulaR1C1 = "=SUMIFS(Loads_ROAD.csv!C3,Loads_ROAD.csv!C1,R[1]C[13],Loads_ROAD.csv!C2,RC[13])"
+    
+    Range("N7").FormulaR1C1 = "=SUMIFS(Loads_ROAD.csv!C3,Loads_ROAD.csv!C1,R[1]C[11],Loads_ROAD.csv!C2,RC[11])"
+    
+    Range("R7").FormulaR1C1 = "=SUMIFS(Loads_ROAD.csv!C3,Loads_ROAD.csv!C1,R[1]C[7])"
+        
+    ' Pasting as values
+   
+    Range("K7").Value = Range("K7").Value
+    Range("N7").Value = Range("N7").Value
+    Range("R7").Value = Range("R7").Value
+    
+    
+    
+ 'SEA
+ 
+ChDir _
+        "\\XXX\Loads"
+    Workbooks.Open Filename:= _
+        "\\XXX\Loads\Loads_SEA.csv"
+    Columns("A:A").Select
+    Selection.TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
+        TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
+        Semicolon:=False, Comma:=False, Space:=False, Other:=False, FieldInfo _
+        :=Array(Array(1, 1), Array(2, 1), Array(3, 1)), TrailingMinusNumbers:=True
+    Windows("DRS 2023.xlsm").Activate
+    
+    Range("K14").FormulaR1C1 = "=SUMIFS(Loads_SEA.csv!C3,Loads_SEA.csv!C1,R[-6]C[13],Loads_SEA.csv!C2,R[-7]C[13])"
+    
+    Range("N14").FormulaR1C1 = "=SUMIFS(Loads_SEA.csv!C3,Loads_SEA.csv!C1,R[-6]C[11],Loads_SEA.csv!C2,R[-7]C[11])"
+    
+    Range("R14").FormulaR1C1 = "=SUMIFS(Loads_SEA.csv!C3,Loads_SEA.csv!C1,R[-6]C[7])"
+    
+    ' Pasting as values
+    
+    
+    Range("K14").Value = Range("K14").Value
+    Range("N14").Value = Range("N14").Value
+    Range("R14").Value = Range("R14").Value
+    
+    
+        
+    
+  ' RAIL
+  
+  Workbooks.Open Filename:= _
+        "\\XXX\Loads\Loads_RAIL.csv"
+    Columns("A:A").Select
+    Selection.TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
+        TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
+        Semicolon:=False, Comma:=False, Space:=False, Other:=False, FieldInfo _
+        :=Array(Array(1, 1), Array(2, 1), Array(3, 1)), TrailingMinusNumbers:=True
+    ActiveWindow.SmallScroll Down:=-6
+    Windows("DRS 2023.xlsm").Activate
+    
+    Range("K17").FormulaR1C1 = "=SUMIFS(Loads_RAIL.csv!C3,Loads_RAIL.csv!C1,R[-9]C[13],Loads_RAIL.csv!C2,R[-10]C[13])"
+        
+    Range("N17").FormulaR1C1 = "=SUMIFS(Loads_RAIL.csv!C3,Loads_RAIL.csv!C1,R[-9]C[11],Loads_RAIL.csv!C2,R[-10]C[11])"
+    
+    Range("R17").FormulaR1C1 = "=SUMIFS(Loads_RAIL.csv!C3,Loads_RAIL.csv!C1,R[-9]C[7])"
+    
+    ' Pasting as values
+    
+    Range("K17").Value = Range("K17").Value
+    Range("N17").Value = Range("N17").Value
+    Range("R17").Value = Range("R17").Value
+    
+    
+    
+    
+    ' Pasting loads from sec table to Compliance
+    
+    Range("K26").Value = Range("K7").Value
+    Range("K35").Value = Range("K14").Value
+    Range("K39").Value = Range("K17").Value
+    
+    Range("N26").Value = Range("N7").Value
+    Range("N35").Value = Range("N14").Value
+    Range("N39").Value = Range("N17").Value
+    
+    Range("R26").Value = Range("R7").Value
+    Range("R35").Value = Range("R14").Value
+    Range("R39").Value = Range("R17").Value
+    
+    
+    
+    ' Close the source file
+    
+    
+    Windows("Loads_ROAD.csv").Close
+    Windows("Loads_SEA.csv").Close
+    Windows("Loads_RAIL.csv").Close
+    
+    
+    
+    ' Table heading
+    
+    Range("I6").Formula = "=CONCAT(""Security incidents w"", 'Security & Compliance'!Y7)"
+    Range("I6").Value = Range("I6").Value
+        
+    Range("I25").Formula = "=CONCAT(""Compliance w"", 'Security & Compliance'!Y7)"
+    Range("I25").Value = Range("I25").Value
+    
+    
+    
+    
+    
+    ' Alert and screen updating
+    
+    Application.ScreenUpdating = True
+    Application.DisplayAlerts = True
+    Application.CutCopyMode = False
+
+End Sub
